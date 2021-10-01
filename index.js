@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 
 const TokenList = require("../token.json"); // Important for hosting.
 const config = require("./configuration.json");
+const MessageHandler = require("./message");
 
 class GME {
     constructor() {
@@ -10,7 +11,13 @@ class GME {
         const client = new Discord.Client();
         this.client = client;
 
-        client.on("message", message => {})
+        // Definiions
+        
+            const g_prefix = config.global_prefix;
+
+        client.on("message", message => {
+
+        })
 
         client.login(TokenList.GME_TOKEN).then(() => {
         this.load();

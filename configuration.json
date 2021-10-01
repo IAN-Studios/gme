@@ -1,4 +1,5 @@
 {
     "status": "games",
-    "bot_mode": "dev"
+    "bot_mode": "dev",
+    "global_prefix": ".g"
 }

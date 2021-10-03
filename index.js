@@ -13,10 +13,9 @@ class GME {
 
         // Definiions
         
-            const g_prefix = config.global_prefix;
+            const prefix = config.global_prefix;
 
         client.on("message", message => {
-
         })
 
         client.login(TokenList.GME_TOKEN).then(() => {

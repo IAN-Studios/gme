@@ -1,15 +1,14 @@
 const Discord = require("discord.js");
+const { Intents } = require("discord.js");
 const colors = require ("colors")
 
-const TokenList = require("../token.json"); // Important for hosting.
 const config = require("./configuration.json")
 
 class GME {
-    constructor() {
+    constructor(token) {
 
-        this.client;
-        const client = new Discord.Client();
-        this.client = client;
+        this.token = token;
+        const client = new Discord.Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
         // Definiions
         
@@ -17,19 +16,24 @@ class GME {
 
         // Events
 
-        client.on("debug", message => {
-            console.debug(message)
-        });
+        client.on("debug",message =>{if(message.toLowerCase().includes("heartbeat"))return;console.debug(`${colors.gray(`${new Date()}`)} ${message}`);});
+        client.on("ready",()=>{console.log(colors.bold(`Client fully ready.`))
+        const embdd = new Discord.MessageEmbed()
+        client.channels.cache.get("826917321205088337").send("8")
+    })
 
         client.on("message", message => {
+            if (message.author.id == client.user.id) return;
+            console.log(message.author + ": " + message.content);
+
+            
         });
 
-        client.login(TokenList.GME_TOKEN).then(() => {
-        this.load();
+        client.login(this.token).then(() => {
+        load();
         });
-}ggfgggycfyjfgvvgjhgvhcfhcchgghcfhgvgnvgvgv
-
-load() {
-    this.client.user.setActivity(config.status, {type:"COMPETING"})
+        function load() {
+            client.user.setActivity(config.status, {type:"COMPETING"})
+        }
 }
 } module.exports = {GME};

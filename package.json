@@ -1,0 +1,25 @@
+{
+  "name": "GME",
+  "description": "Package",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "node onlinehost",
+    "main": "node main",
+    "dev": "node dev"
+  },
+  "dependencies": {
+    "chart.js": "^3.2.1",
+    "colors": "^1.4.0",
+    "discord.js": "12.2.0",
+    "dotenv": "^8.2.0",
+    "node": "^13.8.0"
+  },
+  "devDependencies": {
+    "discord.js": "^13.2.0"
+  },
+  "keywords": [
+    "discord-bot"
+  ],
+  "author": "IAN Development Team",
+  "license": "ISC"
+}

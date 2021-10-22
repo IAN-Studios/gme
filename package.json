@@ -7,16 +7,16 @@
     "main": "node main",
     "dev": "node dev"
   },
-  "dependencies": {
-    "chart.js": "^3.2.1",
-    "colors": "^1.4.0",
-    "discord.js": "12.2.0",
-    "dotenv": "^8.2.0",
-    "node": "^13.8.0"
-  },
-  "devDependencies": {
-    "discord.js": "^13.2.0"
-  },
+      "dependencies": {
+        "chart.js": "^3.2.1",
+        "colors": "^1.4.0",
+        "discord.js": "^12.5.3",
+        "dotenv": "^8.2.0",
+        "node": "14.18.1"
+      },
+      "devDependencies": {
+        "nodemon": "^1.19.4"
+      },
   "keywords": [
     "discord-bot"
   ],

@@ -25,15 +25,15 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    #- run: npm install discord.js
-    #  name: Installing Modules (1/4)
-    #- run: npm install colors
-    #  name: Installing Modules (2/4)
-    #- run: npm install chart.js
-    #  name: Installing Modules (3/4)
-    #- run: npm install dotenv
-    #  name: Installing Modules (4/4)
+    - run: npm install discord.js
+      name: Installing Modules (1/4)
+    - run: npm install colors
+      name: Installing Modules (2/4)
+    - run: npm install chart.js
+      name: Installing Modules (3/4)
+    - run: npm install dotenv
+      name: Installing Modules (4/4)
     - run: node onlinehost
-      name: Launch Bot
+      name: GME Console
       env:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN}}

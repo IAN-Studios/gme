@@ -1,5 +1,5 @@
 const gme = require("./index")
-cosnsole.warn(process.env.BOT_TOKEN);
+console.warn(process.env.BOT_TOKEN);
 return;
 try {
 const token = process.env.BOT_TOKEN

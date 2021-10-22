@@ -1,4 +1,4 @@
-const gme = require("./gme")
+const gme = require("./index")
 try {
 const token = process.env.BOT_TOKEN
 } catch {

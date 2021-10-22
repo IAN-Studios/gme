@@ -33,3 +33,6 @@ jobs:
     - run: npm install chart.js
     - run: npm install dotenv
     - run: node onlinehost
+      name: Start Client
+      env:
+        BOT_TOKEN:${{ secrets.BOT_TOKEN}}

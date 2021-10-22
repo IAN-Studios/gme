@@ -1,7 +1,11 @@
 # This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: GME Github Client (1h)
+
+concurrency: 
+  group: ${{ github.head_ref }}
+  cancel-in-progress: true
 
 on:
   push:
@@ -37,3 +41,5 @@ jobs:
       name: GME Console
       env:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN}}
+      timeout-minutes: 60
+      continue-on-error: true

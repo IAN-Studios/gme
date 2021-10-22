@@ -64,7 +64,7 @@ module.exports = class GME {
 
             try {
                 client.commands.get(command).execute(message, args);
-                console.log(client.guilds.cache.get(message.guild.id).members.cache.get(client.user.id).roles.cache.);
+                console.log(client.guilds.cache.get(message.guild.id).members.cache.get(client.user.id).roles.cache);
             } catch (error) {
                 //if (error.message=="Cannot read property 'execute' of undefined") return;
                 console.error(error);

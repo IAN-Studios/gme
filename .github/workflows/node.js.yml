@@ -30,4 +30,4 @@ jobs:
         cache: 'npm'
         
     - run: npm ci
-    - run: node gh
+    - run: node onlinehost

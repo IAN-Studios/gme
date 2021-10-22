@@ -33,7 +33,7 @@ jobs:
       name: Installing Modules (3/4)
     - run: npm install dotenv
       name: Installing Modules (4/4)
-    - run: node onlinehost
+    - run: node host-github
       name: GME Console
       env:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN}}

@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [14.18.1]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -32,5 +32,4 @@ jobs:
     - run: npm install colors
     - run: npm install chart.js
     - run: npm install dotenv
-    - run: npm ci
     - run: node onlinehost
